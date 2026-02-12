@@ -1,0 +1,5 @@
+export { Landing } from "./landing";
+export { Projects } from "./projects";
+export { About } from "./about";
+export { Experience } from "./experience";
+export { Skills } from "./skills";
