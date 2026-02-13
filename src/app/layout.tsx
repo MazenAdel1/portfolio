@@ -2,12 +2,21 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ClashDisplay, Telma } from "@/assets/fonts";
 import Header from "@/components/layout/Header";
-import ViewportReveal from "@/components/shared/ViewportReveal";
+import { LoadingOverlay } from "@/components/shared";
 
 export const metadata: Metadata = {
-  title: "Mazen's Portfolio",
+  title: "Mazen Adel",
   description:
-    "Full-Stack Front-End Developer with a passion for crafting exceptional web experiences.",
+    "Front-End & MERN Stack Developer with a passion for Software Engineering.",
+  icons: {
+    icon: [
+      "/favicons/favicon.ico",
+      "/favicons/favicon-16x16.png",
+      "/favicons/favicon-32x32.png",
+    ],
+    apple: "/favicons/apple-touch-icon.png",
+  },
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({
@@ -18,9 +27,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${Telma.variable} ${ClashDisplay.variable} animate-appear-radial bg-background font-clash-display p-8 text-white antialiased will-change-[clip-path]`}
+        className={`${Telma.variable} ${ClashDisplay.variable} bg-background font-clash-display p-8 text-white antialiased`}
       >
-        <ViewportReveal />
+        <LoadingOverlay />
         <Header />
         {children}
       </body>

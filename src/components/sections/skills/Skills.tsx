@@ -1,26 +1,7 @@
 import Image from "next/image";
+import { SKILLS } from "./consts";
 
 export default function Skills() {
-  const skills = [
-    "html",
-    "css",
-    "js",
-    "ts",
-    "bootstrap",
-    "tailwind",
-    "react",
-    "next",
-    "node",
-    "express",
-    "mongo",
-    "postgres",
-    "prisma",
-    "jest",
-    "firebase",
-    "motion",
-    "git",
-    "github",
-  ];
   return (
     <section
       id="skills"
@@ -28,11 +9,14 @@ export default function Skills() {
     >
       <div className="absolute size-full backdrop-blur-xs" />
       <div className="glass corner-squircle relative grid grid-cols-9 overflow-hidden rounded-3xl bg-white/10!">
-        {skills.map((skill) => (
+        {SKILLS.map((skill) => (
           <div
             key={skill}
-            className="flex h-fit items-center justify-center border border-white/20 p-3"
+            className="group relative flex h-fit items-center justify-center border border-white/20 p-3 hover:border-black/20"
           >
+            <div className="absolute inset-0 flex items-center justify-center bg-black/40 text-white uppercase opacity-0 transition-opacity group-hover:opacity-100">
+              {skill}
+            </div>
             <Image
               src={`/skills/${skill}.svg`}
               alt={skill}

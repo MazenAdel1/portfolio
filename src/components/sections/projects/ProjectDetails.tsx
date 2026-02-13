@@ -20,7 +20,7 @@ export default function ProjectDetails({
         className="relative bg-cover bg-position-[0%_90%] p-5"
         style={{ backgroundImage: `url(${project.images.background})` }}
       >
-        <div className="absolute inset-0 bg-black/10 backdrop-blur-md" />
+        <div className="absolute inset-0 bg-black/20" />
 
         <div className="relative flex gap-8">
           <Image
@@ -66,6 +66,7 @@ export default function ProjectDetails({
                     {tech.partner && (
                       <Link
                         href={tech.partner.href}
+                        target="_blank"
                         className="ml-2 font-medium underline hover:no-underline"
                       >
                         By {tech.partner.name}
@@ -80,6 +81,7 @@ export default function ProjectDetails({
                 <Link
                   key={i}
                   href={link.url}
+                  target="_blank"
                   className="underline hover:no-underline"
                 >
                   {link.title}

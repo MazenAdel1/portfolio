@@ -114,7 +114,7 @@ export const projects: ProjectProps[] = [
       },
     ],
     images: {
-      main: "/projects/logos/portfolio-image.png",
+      main: "/projects/logos/portfolio-logo.png",
       background: "/projects/backgrounds/image-04.jpg",
     },
   },

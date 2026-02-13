@@ -15,7 +15,10 @@ export default function Header() {
       <ul className="flex gap-6">
         {LINKS.map((link, i) => (
           <li key={i}>
-            <Link href={link.href} className="text-lg">
+            <Link
+              href={link.href}
+              className="text-lg transition hover:text-yellow-300"
+            >
               {link.name}
             </Link>
           </li>

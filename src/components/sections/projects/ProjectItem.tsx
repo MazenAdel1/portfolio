@@ -30,7 +30,7 @@ export default function ProjectItem({
           className="relative flex h-30 w-full cursor-pointer items-center justify-between overflow-hidden bg-cover px-4 text-2xl font-semibold transition-all duration-300 ease-in-out"
           style={{
             backgroundImage: `url(${images.background})`,
-            backgroundPosition: isHovered || isActive ? "0% 70%" : "0% 90%",
+            backgroundPosition: isActive ? "0% 70%" : "0% 90%",
           }}
         >
           <span>{id.toString().padStart(2, "0")}</span>

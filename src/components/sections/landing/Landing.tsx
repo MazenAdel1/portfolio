@@ -1,6 +1,6 @@
 "use client";
 
-import AnimatedText from "@/components/shared/AnimatedText";
+import { AnimatedText } from "@/components/shared";
 import { useScroll, useTransform, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";

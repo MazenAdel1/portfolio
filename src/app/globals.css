@@ -3,8 +3,6 @@
 :root {
   --background: #e1e1e1;
   --white: #f1f1f1;
-  --reveal-x: 50vw;
-  --reveal-y: 50vh;
 }
 
 @theme inline {
@@ -14,8 +12,6 @@
   --font-clash-display: "ClashDisplay", sans-serif;
   --shadow-back: 0 0 15px -3px rgba(0, 0, 0, 0.5);
   --drop-shadow-solid: -0.25rem 0.25rem 0.1rem rgba(0, 0, 0, 0.5);
-  --animate-appear-radial: appear-radial 2s cubic-bezier(0.76, 0.27, 0.85, 0.67)
-    forwards;
 }
 
 @utility corner-squircle {
@@ -23,13 +19,28 @@
   border-corner-shape: squircle;
 }
 
-@keyframes appear-radial {
-  from {
-    clip-path: circle(0% at var(--reveal-x) var(--reveal-y));
-  }
+@keyframes resize {
   to {
-    clip-path: circle(150% at var(--reveal-x) var(--reveal-y));
+    width: 150dvw;
+    height: 150dvh;
+    border-radius: 0px;
   }
+}
+
+@keyframes hide {
+  to {
+    opacity: 0;
+    display: none;
+    pointer-events: none;
+    visibility: hidden;
+    z-index: -1;
+  }
+}
+
+#loading {
+  animation:
+    3s resize ease-in-out forwards,
+    0s hide 3s forwards;
 }
 
 .glass {
