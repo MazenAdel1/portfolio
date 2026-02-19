@@ -19,6 +19,10 @@
   border-corner-shape: squircle;
 }
 
+@utility section {
+  @apply corner-squircle relative h-[calc(100dvh-2rem)] rounded-[50px] bg-cover bg-center p-4 md:h-[calc(100dvh-3rem)] lg:h-[calc(100dvh-4rem)];
+}
+
 @keyframes resize {
   to {
     width: 150dvw;
