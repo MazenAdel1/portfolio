@@ -5,9 +5,11 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="corner-squircle flex h-[calc(100dvh-4rem)] flex-col gap-20 rounded-[50px] bg-[url(/contact/background.jpg)] bg-cover bg-center px-10 pt-20"
+      className="section flex flex-col justify-center gap-20 bg-[url(/contact/background.webp)] px-10 pt-10 md:pt-20"
     >
-      <h2 className="font-telma text-center text-7xl font-bold">
+      <div className="absolute top-0 left-0 size-full bg-black/10" />
+
+      <h2 className="font-telma -mt-10 text-center text-4xl font-bold sm:text-5xl md:text-6xl lg:text-7xl">
         Keep in Touch
       </h2>
       <div className="flex flex-col items-center gap-10">
