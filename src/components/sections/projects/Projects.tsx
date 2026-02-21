@@ -8,8 +8,8 @@ export default function Projects() {
   const [activeTab, setActiveTab] = useState("");
 
   return (
-    <section id="projects" className="py-10">
-      <div className="flex w-full flex-col">
+    <section id="projects" className="py-6 md:py-8 lg:py-10">
+      <div className="corner-squircle flex w-full flex-col overflow-hidden rounded-[50px]">
         {projects.map((project) => (
           <ProjectItem
             key={project.id}
