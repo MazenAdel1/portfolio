@@ -16,24 +16,24 @@ export default function About() {
     <section
       ref={ref}
       id="about"
-      className="corner-squircle relative flex h-[calc(100dvh-4rem)] flex-col items-center justify-center gap-5 overflow-hidden rounded-[50px] bg-[url('/about/self-background.png')] bg-cover bg-center p-5 text-center"
+      className="section flex flex-col items-center justify-center gap-5 overflow-hidden bg-[url('/about/self-background.webp')] text-center"
     >
       <motion.div
         style={{ y: bottomY }}
-        className="absolute bottom-[-20%] left-1/2 w-200 -translate-x-1/2"
+        className="absolute bottom-[-10%] left-1/2 w-160 -translate-x-1/2 sm:bottom-[-15%] sm:w-180 md:bottom-[-20%] md:w-200"
       >
         <Image
-          src="/about/self-no-background.png"
+          src="/about/self-no-background.webp"
           alt="self portrait in romanticism style"
           width={1000}
           height={1000}
           className="w-full"
         />
       </motion.div>
-      <h2 className="font-telma mb-3 text-8xl font-semibold tracking-widest [word-spacing:0.5rem]">
+      <h2 className="font-telma mb-3 text-[10dvw] font-semibold tracking-widest [word-spacing:0.5rem] md:text-8xl">
         Mazen Adel
       </h2>
-      <p className="drop-shadow-solid relative text-lg tracking-wide capitalize [word-spacing:0.05rem]">
+      <p className="drop-shadow-solid relative max-w-3xl text-lg tracking-wide capitalize [word-spacing:0.05rem]">
         I&apos;m a passionate web developer and computer science student with a
         love for creating pixel-perfect websites and systems that solve
         real-world problems using modern technologies.
