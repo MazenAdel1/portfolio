@@ -1,5 +1,7 @@
 import Image from "next/image";
 import { ExperienceItemProps } from "./types";
+import { cn } from "@/lib/utils";
+import * as motion from "motion/react-client";
 
 export default function ExperienceItem({
   image,
@@ -13,10 +15,18 @@ export default function ExperienceItem({
   padding,
 }: ExperienceItemProps) {
   return (
-    <div
-      className={`flex *:flex-1 ${direction === "right" ? "flex-row-reverse" : ""}`}
+    <motion.div
+      initial={{ opacity: 0, filter: "blur(5px)" }}
+      whileInView={{ opacity: 1, filter: "blur(0px)" }}
+      viewport={{ once: true, amount: 0.5 }}
+      className={cn(
+        `flex flex-col *:flex-1 md:flex-row`,
+        direction === "right" && "md:flex-row-reverse",
+      )}
     >
-      <div className={`corner-squircle w-full overflow-hidden ${borderRadius}`}>
+      <div
+        className={cn(`corner-squircle w-full overflow-hidden`, borderRadius)}
+      >
         <Image
           src={image}
           alt={alt}
@@ -27,17 +37,20 @@ export default function ExperienceItem({
       </div>
       <div>
         <div
-          className={`flex h-full w-full flex-col justify-center gap-1 pt-5 ${padding}`}
+          className={cn(
+            `flex h-full w-full flex-col justify-center gap-1 pt-3 md:pt-5`,
+            padding,
+          )}
         >
-          <div className="flex items-end gap-2">
-            <h3 className="text-xl font-semibold">{title}</h3>-
-            <span className="text-base text-gray-700">
-              {type} {date}
+          <h3 className="text-lg font-semibold md:text-xl">
+            {title}
+            <span className="ml-1 text-sm font-normal text-gray-700 md:text-base">
+              - {type} {date}
             </span>
-          </div>
+          </h3>
           <p>{description}</p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
