@@ -1,3 +1,5 @@
+import { ClassNameValue } from "tailwind-merge";
+
 export type ExperienceItemProps = {
   image: string;
   alt: string;
@@ -6,6 +8,6 @@ export type ExperienceItemProps = {
   date: string;
   description: string;
   direction?: "right" | "left";
-  borderRadius: string;
-  padding: string;
+  borderRadius: ClassNameValue;
+  padding: ClassNameValue;
 };
