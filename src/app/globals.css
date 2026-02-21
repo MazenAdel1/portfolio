@@ -20,7 +20,7 @@
 }
 
 @utility section {
-  @apply corner-squircle relative h-[calc(100dvh-2rem)] rounded-[50px] bg-cover bg-center p-4 md:h-[calc(100dvh-3rem)] lg:h-[calc(100dvh-4rem)];
+  @apply corner-squircle relative h-[calc(100dvh-2rem)] overflow-hidden rounded-[50px] bg-cover bg-center p-4 md:h-[calc(100dvh-3rem)] lg:h-[calc(100dvh-4rem)];
 }
 
 @keyframes resize {
@@ -43,8 +43,8 @@
 
 #loading {
   animation:
-    3s resize ease-in-out forwards,
-    0s hide 3s forwards;
+    3s resize ease-in-out 1s forwards,
+    0s hide 4s forwards;
 }
 
 .glass {
