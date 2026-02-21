@@ -32,7 +32,7 @@ export default function Landing() {
           as={"h1"}
           staggerChildren={0.33}
           duration={0.33}
-          delay={1.67}
+          delay={2.33}
           className="text-[11dvw] font-black uppercase text-shadow-(--drop-shadow-solid)"
         />
         <AnimatedText
@@ -40,7 +40,7 @@ export default function Landing() {
           as={"h2"}
           staggerChildren={0.33}
           duration={0.33}
-          delay={2.33}
+          delay={3}
           className="-mt-[4dvw] text-[5dvw] font-semibold capitalize"
         />
       </motion.div>
@@ -52,7 +52,7 @@ export default function Landing() {
         <motion.div
           initial={{ opacity: 0, y: 10, filter: "blur(5px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          transition={{ delay: 3, duration: 0.33, ease: "easeOut" }}
+          transition={{ delay: 3.66, duration: 0.33, ease: "easeOut" }}
         >
           <Image
             src="/icons/arrow-down.svg"
