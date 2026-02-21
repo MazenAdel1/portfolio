@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 const ClashDisplay = localFont({
   src: [
     {
-      path: "./ClashDisplay-ExtraLight.otf",
+      path: "./ClashDisplay-Extralight.otf",
       weight: "200",
     },
     {
