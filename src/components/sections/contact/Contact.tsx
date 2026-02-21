@@ -5,7 +5,8 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="section flex flex-col justify-center gap-20 bg-[url(/contact/background.webp)] px-10 pt-10 md:pt-20"
+      className="section flex flex-col justify-center gap-20 px-10 pt-10 md:pt-20"
+      style={{ backgroundImage: "url('/contact/background.webp')" }}
     >
       <div className="absolute top-0 left-0 size-full bg-black/10" />
 

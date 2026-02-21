@@ -20,7 +20,8 @@ export default function Landing() {
   return (
     <section
       id="landing"
-      className="section overflow-hidden bg-[url('/landing/home-background.webp')]"
+      className="section overflow-hidden"
+      style={{ backgroundImage: "url('/landing/home-background.webp')" }}
     >
       <motion.div
         style={{ y: textY, filter: textBlur, opacity: textOpacity }}

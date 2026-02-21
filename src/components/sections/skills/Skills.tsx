@@ -5,7 +5,8 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="section flex items-center justify-center overflow-hidden bg-[url(/skills/background.webp)] text-black"
+      className="section flex items-center justify-center overflow-hidden text-black"
+      style={{ backgroundImage: "url('/skills/background.webp')" }}
     >
       <div className="absolute size-full backdrop-blur-xs" />
       <div className="glass corner-squircle relative grid grid-cols-5 overflow-hidden rounded-3xl bg-white/10! sm:grid-cols-6 md:grid-cols-7 lg:grid-cols-9">

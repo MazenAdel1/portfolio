@@ -16,7 +16,8 @@ export default function About() {
     <section
       ref={ref}
       id="about"
-      className="section flex flex-col items-center justify-center gap-5 overflow-hidden bg-[url('/about/self-background.webp')] text-center"
+      className="section flex flex-col items-center justify-center gap-5 overflow-hidden text-center"
+      style={{ backgroundImage: "url('/about/self-background.webp')" }}
     >
       <motion.div
         style={{ y: bottomY }}
