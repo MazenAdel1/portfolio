@@ -25,8 +25,8 @@ export const projects: ProjectProps[] = [
       { title: "Real-Time", technologies: ["Socket.io"] },
     ],
     images: {
-      main: "/projects/logos/napd-logo.png",
-      background: "/projects/backgrounds/image-01.jpg",
+      main: "/projects/logos/napd-logo.webp",
+      background: "/projects/backgrounds/image-01.webp",
     },
   },
   {
@@ -61,7 +61,7 @@ export const projects: ProjectProps[] = [
     ],
     images: {
       main: "/projects/logos/yaqra-logo.svg",
-      background: "/projects/backgrounds/image-02.jpg",
+      background: "/projects/backgrounds/image-02.webp",
     },
   },
   {
@@ -86,8 +86,8 @@ export const projects: ProjectProps[] = [
       },
     ],
     images: {
-      main: "/projects/logos/fruitex-logo.png",
-      background: "/projects/backgrounds/image-03.jpg",
+      main: "/projects/logos/fruitex-logo.webp",
+      background: "/projects/backgrounds/image-03.webp",
     },
   },
   {
@@ -114,8 +114,8 @@ export const projects: ProjectProps[] = [
       },
     ],
     images: {
-      main: "/projects/logos/portfolio-logo.png",
-      background: "/projects/backgrounds/image-04.jpg",
+      main: "/projects/logos/portfolio-logo.webp",
+      background: "/projects/backgrounds/image-04.webp",
     },
   },
   {
@@ -144,8 +144,8 @@ export const projects: ProjectProps[] = [
       },
     ],
     images: {
-      main: "/projects/logos/atp-logo.png",
-      background: "/projects/backgrounds/image-05.jpg",
+      main: "/projects/logos/atp-logo.webp",
+      background: "/projects/backgrounds/image-05.webp",
     },
   },
 ];
