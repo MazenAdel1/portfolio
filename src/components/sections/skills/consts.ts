@@ -4,6 +4,7 @@ export const SKILLS = [
   "js",
   "ts",
   "bootstrap",
+  "shadcn",
   "tailwind",
   "react",
   "next",
@@ -17,4 +18,5 @@ export const SKILLS = [
   "motion",
   "git",
   "github",
+  "jira",
 ];
