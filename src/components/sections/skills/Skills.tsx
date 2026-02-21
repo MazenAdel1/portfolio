@@ -5,10 +5,10 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="corner-squircle relative flex h-[calc(100dvh-4rem)] items-center justify-center overflow-hidden rounded-[50px] bg-[url(/skills/background.png)] bg-cover bg-center p-4 text-black"
+      className="section flex items-center justify-center overflow-hidden bg-[url(/skills/background.webp)] text-black"
     >
       <div className="absolute size-full backdrop-blur-xs" />
-      <div className="glass corner-squircle relative grid grid-cols-9 overflow-hidden rounded-3xl bg-white/10!">
+      <div className="glass corner-squircle relative grid grid-cols-5 overflow-hidden rounded-3xl bg-white/10! sm:grid-cols-6 md:grid-cols-7 lg:grid-cols-9">
         {SKILLS.map((skill) => (
           <div
             key={skill}
