@@ -11,11 +11,12 @@ export default function Home() {
   return (
     <>
       <div className="absolute top-0 size-0" id="home" />
-      <div className="sticky top-8 z-0">
-        <Landing />
-      </div>
 
-      <div className="bg-background relative z-10 flex flex-col gap-22 pt-12">
+      <main className="sticky top-4 z-0 md:top-6 lg:top-8">
+        <Landing />
+      </main>
+
+      <div className="bg-background relative z-10 flex flex-col gap-22 pt-8 md:pt-10 lg:pt-12">
         <Projects />
         <About />
         <Experience />
