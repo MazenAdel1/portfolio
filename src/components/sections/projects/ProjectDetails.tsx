@@ -16,8 +16,11 @@ export default function ProjectDetails({
       }}
       transition={{ duration: 0.4, ease: "easeInOut" }}
     >
-      <div className="relative border-y border-yellow-200 bg-linear-to-br bg-[radial-gradient(#535860_1px,transparent_1px)] from-gray-700 via-black to-gray-700 bg-size-[16px_16px] p-5">
-        <div className="absolute inset-0 bg-black/40" />
+      <div
+        className="relative bg-cover bg-position-[0%_90%] p-5"
+        style={{ backgroundImage: `url(${project.images.background})` }}
+      >
+        <div className="absolute inset-0 bg-black/40 backdrop-blur-xl" />
 
         <div className="relative flex flex-col gap-8 md:flex-row md:items-center">
           <Image
@@ -25,37 +28,23 @@ export default function ProjectDetails({
             alt={`${project.title} Demo Image`}
             width={1000}
             height={1000}
-            className="size-40 self-center object-contain md:size-60 md:self-start lg:size-80"
+            className="size-40 self-center object-contain drop-shadow-2xl drop-shadow-amber-700/40 md:size-60 md:self-start lg:size-80"
           />
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-4">
             <p className="text-xl text-white">{project.description}</p>
-            <div className="flex flex-col gap-1">
+            <div className="flex flex-col gap-2">
               {/* techs in gradient background colors */}
               {project.technologies.map((tech, i) => {
-                const prevTechsCount = project.technologies
-                  .slice(0, i)
-                  .reduce((sum, t) => sum + t.technologies.length, 0);
-
                 return (
                   <div key={i} className="flex flex-wrap items-center">
                     <span className="inline-block w-25 pr-1 text-lg font-medium">
                       {tech.title}:
                     </span>
                     {tech.technologies.map((t, j) => {
-                      const globalIndex = prevTechsCount + j;
-                      const totalTechs = project.technologies.reduce(
-                        (sum, t) => sum + t.technologies.length,
-                        0,
-                      );
-                      const hue = (globalIndex / totalTechs) * 300 + 180;
-
                       return (
                         <span
                           key={j}
-                          style={{
-                            backgroundColor: `oklch(65% 0.19 ${hue}deg)`,
-                          }}
-                          className="px-1 shadow-sm md:px-2.5 md:py-0.5"
+                          className="border border-yellow-700/50 bg-black/40 px-1 text-amber-100/90 shadow-sm md:px-2.5 md:py-0.5"
                         >
                           {t}
                         </span>
@@ -81,7 +70,7 @@ export default function ProjectDetails({
                 );
               })}
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-3">
               {project.href.map((link, i) => (
                 <Link
                   key={i}
