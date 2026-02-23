@@ -1,7 +1,7 @@
 "use client";
 
-import { motion, MotionProps, useInView, Variants } from "framer-motion";
-import React, { useRef } from "react";
+import { motion, MotionProps, useInView, Variants } from "motion/react";
+import React, { useMemo, useRef } from "react";
 
 type AnimatedTextProps = {
   text: string;
@@ -22,8 +22,9 @@ export default function AnimatedText({
   className = "",
   delay,
   duration = 0.5,
+  animateImmediately = true,
   ...rest
-}: AnimatedTextProps) {
+}: AnimatedTextProps & { animateImmediately?: boolean }) {
   const ref = useRef<HTMLElement>(null);
   const isInView = useInView(ref, { once: true });
 
@@ -51,7 +52,9 @@ export default function AnimatedText({
     },
   });
 
-  const MotionTag = motion.create(Tag);
+  const MotionTag = useMemo(() => motion.create(Tag), [Tag]);
+
+  const words = text.split(" ");
 
   return (
     // eslint-disable-next-line react-hooks/static-components
@@ -60,16 +63,16 @@ export default function AnimatedText({
       className={className}
       variants={container}
       initial="hidden"
-      animate={isInView ? "visible" : "hidden"}
+      animate={isInView || animateImmediately ? "visible" : "hidden"}
       {...rest}
     >
-      {text.split(" ").map((word, index) => (
+      {words.map((word, index) => (
         <motion.span
           key={`${word}-${index}`}
           className="inline-block"
           variants={item(index)}
         >
-          {word} {index < text.split(" ").length - 1 ? "\u00A0" : ""}
+          {word} {index < words.length - 1 ? "\u00A0" : ""}
         </motion.span>
       ))}
     </MotionTag>

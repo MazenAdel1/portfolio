@@ -1,8 +1,7 @@
 "use client";
 
-import { useInView } from "motion/react";
-import { motion, MotionProps } from "framer-motion";
-import React, { useRef } from "react";
+import { useInView, motion, MotionProps } from "motion/react";
+import React, { useMemo, useRef } from "react";
 
 type Props<T extends React.ElementType = "div"> = {
   children?: React.ReactNode;
@@ -24,9 +23,13 @@ export default function AnimationWrapper<T extends React.ElementType = "div">({
   const ref = useRef<HTMLElement | null>(null);
   const isInView = useInView(ref, { once: true });
 
-  const MotionTag = motion.create(
-    as || "div",
-  ) as unknown as React.ComponentType<Record<string, unknown>>;
+  const MotionTag = useMemo(
+    () =>
+      motion.create(as || "div") as unknown as React.ComponentType<
+        Record<string, unknown>
+      >,
+    [as],
+  );
 
   return (
     <MotionTag
