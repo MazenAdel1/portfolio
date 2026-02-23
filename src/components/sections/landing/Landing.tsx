@@ -21,10 +21,10 @@ export default function Landing() {
     <section id="landing" className="section overflow-hidden">
       <Image
         src="/landing/home-background.webp"
-        alt=""
+        alt="a painting for a person fishing in a lake surrounded by green hills and trees"
         fill
         priority
-        sizes="100vw"
+        sizes="100vh"
         className="-z-10 object-cover object-center"
       />
       <motion.div

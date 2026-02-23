@@ -12,7 +12,7 @@ export default function Contact() {
         src="/contact/background.webp"
         alt="a background of a rocky shore with waves and pigeons"
         fill
-        sizes="100vw"
+        sizes="100vh"
         className="-z-10 object-cover object-center"
       />
       <div className="absolute top-0 left-0 size-full bg-black/10" />
