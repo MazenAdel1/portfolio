@@ -43,8 +43,8 @@
 
 #loading {
   animation:
-    3s resize ease-in-out 1s forwards,
-    0s hide 4s forwards;
+    2s resize ease-in-out 1s forwards,
+    0s hide 3s forwards;
 }
 
 .glass {
