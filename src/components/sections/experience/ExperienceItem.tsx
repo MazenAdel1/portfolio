@@ -30,8 +30,9 @@ export default function ExperienceItem({
         <Image
           src={image}
           alt={alt}
-          width={1000}
-          height={1000}
+          width={1024}
+          height={576}
+          sizes="(max-width: 768px) 100vw, 50vw"
           className="w-full"
         />
       </div>
