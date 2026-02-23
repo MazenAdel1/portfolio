@@ -108,8 +108,8 @@ export const projects: ProjectProps[] = [
           "Next.js",
           "React",
           "Typescript",
-          "Framer Motion",
           "Tailwind CSS",
+          "Framer Motion",
         ],
       },
     ],
@@ -132,7 +132,13 @@ export const projects: ProjectProps[] = [
     technologies: [
       {
         title: "Front-End",
-        technologies: ["Next.js", "React", "Typescript"],
+        technologies: [
+          "Next.js",
+          "React",
+          "Typescript",
+          "TailwindCSS",
+          "Framer Motion",
+        ],
       },
       {
         title: "Back-End",
