@@ -1,11 +1,9 @@
 "use client";
 
-import { useRef } from "react";
+import { useCallback } from "react";
 import Link from "next/link";
-import { useScroll, useMotionValueEvent } from "motion/react";
 import { LINKS } from "./consts";
-
-const sectionIds = LINKS.map((l) => l.href.replace("/#", ""));
+import { useScrollSections } from "@/hooks/useScrollSections";
 
 export default function NavLinkItem({
   link,
@@ -16,53 +14,14 @@ export default function NavLinkItem({
   index: number;
   isLast: boolean;
 }) {
-  const barRef = useRef<HTMLSpanElement>(null);
-  const { scrollY } = useScroll();
+  const { registerBar } = useScrollSections();
 
-  useMotionValueEvent(scrollY, "change", () => {
-    if (!barRef.current) return;
-
-    let percent = 0;
-
-    if (index === 0) {
-      // Home's Landing is sticky — its rect.top is always ~0.
-      // Drive home's progress by how far the next section has scrolled in:
-      // 0% when next section bottom is at viewport bottom, 100% when its top reaches viewport top.
-      const nextEl = document.getElementById(sectionIds[1]);
-      if (nextEl) {
-        const nextRect = nextEl.getBoundingClientRect();
-        // 0% when Projects bottom-edge is at viewport bottom,
-        // 100% when Projects top-edge reaches viewport top
-        percent =
-          ((window.innerHeight - nextRect.top) / window.innerHeight) * 100;
-        percent = Math.max(0, Math.min(100, percent));
-      }
-    } else {
-      const el = document.getElementById(sectionIds[index]);
-      if (!el) return;
-
-      const rect = el.getBoundingClientRect();
-      const relScroll = -Math.round(rect.top);
-      const sectionHeight = Math.round(rect.height);
-
-      if (relScroll >= 0 && relScroll <= sectionHeight) {
-        percent = (relScroll * 100) / sectionHeight;
-      } else if (relScroll > sectionHeight) {
-        percent = 100;
-      }
-
-      // Last section: fill 100% when page bottom is reached
-      if (
-        isLast &&
-        window.scrollY + window.innerHeight >=
-          document.documentElement.scrollHeight - 2
-      ) {
-        percent = 100;
-      }
-    }
-
-    barRef.current.style.width = `${percent}%`;
-  });
+  const barCallbackRef = useCallback(
+    (el: HTMLSpanElement | null) => {
+      registerBar(index, el);
+    },
+    [registerBar, index],
+  );
 
   return (
     <li className="relative">
@@ -78,7 +37,7 @@ export default function NavLinkItem({
 
       {/* Active underline */}
       <span
-        ref={barRef}
+        ref={barCallbackRef}
         className={`absolute bottom-0 left-0 h-px rounded-full bg-yellow-300 ${
           isLast ? "transition-[width] duration-300 ease-out" : ""
         }`}
