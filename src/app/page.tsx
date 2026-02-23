@@ -1,15 +1,18 @@
-import dynamic from "next/dynamic";
-import { Landing, Experience, Skills, Contact } from "@/components/sections";
-
-const Projects = dynamic(() => import("@/components/sections/projects/Projects"));
-const About = dynamic(() => import("@/components/sections/about/About"));
+import {
+  About,
+  Landing,
+  Projects,
+  Experience,
+  Skills,
+  Contact,
+} from "@/components/sections";
 
 export default function Home() {
   return (
     <>
       <div className="absolute top-0 size-0" id="home" />
 
-      <main className="top-4 z-0 md:sticky md:top-6 lg:top-8">
+      <main className="sticky top-4 z-0 md:top-6 lg:top-8">
         <Landing />
       </main>
 
