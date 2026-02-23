@@ -1,7 +1,7 @@
 "use client";
 
 import { useFollowPointer } from "@/hooks/useFollowPointer";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { useRef, useState } from "react";
 import FloatingImage from "./FloatingImage";
 import ProjectDetails from "./ProjectDetails";

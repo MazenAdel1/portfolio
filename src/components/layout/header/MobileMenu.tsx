@@ -1,12 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
 import { LINKS } from "./consts";
 import Link from "next/link";
-import { useActiveSection } from "@/hooks/useActiveSection";
+import { useScrollSections } from "@/hooks/useScrollSections";
 
 /** Returns true only on the client, false during SSR — no effects needed. */
 function useIsMounted() {
@@ -17,13 +17,10 @@ function useIsMounted() {
   );
 }
 
-// Ensure Home link points to the correct section
-LINKS[0].href = "/#home";
-
 export default function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false);
   const isMounted = useIsMounted();
-  const { activeName } = useActiveSection();
+  const { activeName } = useScrollSections();
 
   // Prevent body scroll while menu is open
   useEffect(() => {
