@@ -3,23 +3,23 @@ import localFont from "next/font/local";
 const Telma = localFont({
   src: [
     {
-      path: "./Telma-Light.otf",
+      path: "./Telma-Light.woff2",
       weight: "300",
     },
     {
-      path: "./Telma-Regular.otf",
+      path: "./Telma-Regular.woff2",
       weight: "400",
     },
     {
-      path: "./Telma-Medium.otf",
+      path: "./Telma-Medium.woff2",
       weight: "500",
     },
     {
-      path: "./Telma-Bold.otf",
+      path: "./Telma-Bold.woff2",
       weight: "700",
     },
     {
-      path: "./Telma-Black.otf",
+      path: "./Telma-Black.woff2",
       weight: "900",
     },
   ],
