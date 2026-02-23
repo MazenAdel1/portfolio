@@ -6,8 +6,14 @@ export default function Skills() {
     <section
       id="skills"
       className="section flex items-center justify-center overflow-hidden text-black"
-      style={{ backgroundImage: "url('/skills/background.webp')" }}
     >
+      <Image
+        src="/skills/background.webp"
+        alt=""
+        fill
+        sizes="100vw"
+        className="-z-10 object-cover object-center"
+      />
       <div className="absolute size-full backdrop-blur-xs" />
       <div className="glass corner-squircle relative grid grid-cols-5 overflow-hidden rounded-3xl bg-white/10! sm:grid-cols-6 md:grid-cols-7 lg:grid-cols-9">
         {SKILLS.map((skill) => (

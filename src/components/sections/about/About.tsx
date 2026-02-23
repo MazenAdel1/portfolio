@@ -1,6 +1,6 @@
 "use client";
 
-import { useScroll, useTransform, motion } from "framer-motion";
+import { useScroll, useTransform, motion } from "motion/react";
 import Image from "next/image";
 import { useRef } from "react";
 
@@ -17,8 +17,14 @@ export default function About() {
       ref={ref}
       id="about"
       className="section flex flex-col items-center justify-center gap-5 overflow-hidden text-center"
-      style={{ backgroundImage: "url('/about/self-background.webp')" }}
     >
+      <Image
+        src="/about/self-background.webp"
+        alt="a self portrait in romanticism style"
+        fill
+        sizes="100vw"
+        className="-z-10 object-cover object-center"
+      />
       <motion.div
         style={{ y: bottomY }}
         className="absolute bottom-[-10%] left-1/2 w-160 -translate-x-1/2 sm:bottom-[-15%] sm:w-180 md:bottom-[-20%] md:w-200"
@@ -26,8 +32,9 @@ export default function About() {
         <Image
           src="/about/self-no-background.webp"
           alt="self portrait in romanticism style"
-          width={1000}
-          height={1000}
+          width={1024}
+          height={1024}
+          sizes="(max-width: 640px) 640px, 800px"
           className="w-full"
         />
       </motion.div>

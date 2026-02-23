@@ -26,8 +26,9 @@ export default function ProjectDetails({
           <Image
             src={project.images.main}
             alt={`${project.title} Demo Image`}
-            width={1000}
-            height={1000}
+            width={1024}
+            height={576}
+            sizes="(max-width: 768px) 100vw, 50vw"
             className="size-40 self-center object-contain drop-shadow-2xl drop-shadow-amber-700/40 md:size-60 md:self-start lg:size-80"
           />
           <div className="flex flex-col gap-4">

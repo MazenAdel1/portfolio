@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatedText } from "@/components/shared";
-import { useScroll, useTransform, motion } from "framer-motion";
+import { useScroll, useTransform, motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -18,11 +18,15 @@ export default function Landing() {
   const bottomY = useTransform(scrollYProgress, [0, 0.3], ["0%", "-60%"]);
 
   return (
-    <section
-      id="landing"
-      className="section overflow-hidden"
-      style={{ backgroundImage: "url('/landing/home-background.webp')" }}
-    >
+    <section id="landing" className="section overflow-hidden">
+      <Image
+        src="/landing/home-background.webp"
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        className="-z-10 object-cover object-center"
+      />
       <motion.div
         style={{ y: textY, filter: textBlur, opacity: textOpacity }}
         className="font-telma absolute top-1/2 left-1/2 flex w-full -translate-x-1/2 -translate-y-1/2 flex-col items-center select-none"
@@ -32,7 +36,8 @@ export default function Landing() {
           as={"h1"}
           staggerChildren={0.33}
           duration={0.33}
-          delay={2.33}
+          delay={2}
+          animateImmediately
           className="text-[11dvw] font-black uppercase text-shadow-(--drop-shadow-solid)"
         />
         <AnimatedText
@@ -40,7 +45,8 @@ export default function Landing() {
           as={"h2"}
           staggerChildren={0.33}
           duration={0.33}
-          delay={3}
+          delay={2.66}
+          animateImmediately
           className="-mt-[4dvw] text-[5dvw] font-semibold capitalize"
         />
       </motion.div>
@@ -52,7 +58,7 @@ export default function Landing() {
         <motion.div
           initial={{ opacity: 0, y: 10, filter: "blur(5px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          transition={{ delay: 3.66, duration: 0.33, ease: "easeOut" }}
+          transition={{ delay: 3.33, duration: 0.33, ease: "easeOut" }}
         >
           <Image
             src="/icons/arrow-down.svg"
