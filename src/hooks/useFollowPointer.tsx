@@ -10,6 +10,10 @@ export function useFollowPointer(ref: RefObject<HTMLElement | null>) {
   useEffect(() => {
     if (!ref.current) return;
 
+    // Skip on touch-only devices — FloatingImage is hidden on mobile anyway
+    const mq = window.matchMedia("(pointer: fine)");
+    if (!mq.matches) return;
+
     const handlePointerMove = ({ clientX, clientY }: MouseEvent) => {
       const element = ref.current!;
       const rect = element.getBoundingClientRect();
@@ -23,7 +27,7 @@ export function useFollowPointer(ref: RefObject<HTMLElement | null>) {
     window.addEventListener("pointermove", handlePointerMove);
 
     return () => window.removeEventListener("pointermove", handlePointerMove);
-  });
+  }, [ref, x, y]);
 
   return { x, y };
 }
