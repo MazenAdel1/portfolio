@@ -27,7 +27,7 @@ export default function About() {
       />
       <motion.div
         style={{ y: bottomY }}
-        className="absolute bottom-[-10%] left-1/2 w-160 -translate-x-1/2 sm:bottom-[-15%] sm:w-180 md:bottom-[-20%] md:w-200"
+        className="absolute bottom-[-10%] left-1/2 w-160 -translate-x-1/2 opacity-75 sm:bottom-[-15%] sm:w-180 md:bottom-[-20%] md:w-200 md:opacity-100"
       >
         <Image
           src="/about/self-no-background.webp"
