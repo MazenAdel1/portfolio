@@ -5,6 +5,7 @@ import {
   Experience,
   Skills,
   Contact,
+  Gdg,
 } from "@/components/sections";
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
       <div className="bg-background relative z-10 flex flex-col gap-22 pt-8 md:pt-10 lg:pt-12">
         <Projects />
         <About />
+        <Gdg />
         <Experience />
         <Skills />
         <Contact />
