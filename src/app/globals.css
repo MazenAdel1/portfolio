@@ -20,13 +20,13 @@
 }
 
 @utility section {
-  @apply corner-squircle relative h-[calc(100dvh-2rem)] overflow-hidden rounded-[50px] bg-cover bg-center p-4 md:h-[calc(100dvh-3rem)] lg:h-[calc(100dvh-4rem)];
+  @apply corner-squircle relative h-[calc(100vh-2rem)] overflow-hidden rounded-[50px] bg-cover bg-center p-4 md:h-[calc(100vh-3rem)] lg:h-[calc(100vh-4rem)];
 }
 
 @keyframes resize {
   to {
-    width: 150dvw;
-    height: 150dvh;
+    width: 150vw;
+    height: 150vh;
     border-radius: 0px;
   }
 }
