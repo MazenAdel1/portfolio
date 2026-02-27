@@ -1,11 +1,13 @@
 import { MotionValue } from "motion";
 
+type HrefTitle = "Demo Video" | "Github Repository" | "Live Website";
+
 export type ProjectProps = {
   id: number;
   title: string;
   description: string;
   href: {
-    title: string;
+    title: HrefTitle;
     url: string;
   }[];
   technologies: {
