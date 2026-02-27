@@ -12,7 +12,7 @@ export const projects: ProjectProps[] = [
         url: "https://drive.google.com/file/d/1ArcDsIWLWlyGzuYp7BVYaC8f4PlKL2jI/view",
       },
       {
-        title: "GitHub Repository",
+        title: "Github Repository",
         url: "https://github.com/MazenAdel1/napd",
       },
     ],
@@ -36,7 +36,7 @@ export const projects: ProjectProps[] = [
       "A readers-community application for sharing and discovering books for the arabic community, with different social features like following, commenting, and rating.",
     href: [
       {
-        title: "Video Demo",
+        title: "Demo Video",
         url: "https://drive.google.com/file/d/1EBKqUySOXieF3XiOTuNxCxkRc5eypNEW/view",
       },
       {
@@ -97,7 +97,7 @@ export const projects: ProjectProps[] = [
       "The website you are currently on, a personal portfolio to showcase my projects and skills, with a special vibes and animations.",
     href: [
       {
-        title: "GitHub Repository",
+        title: "Github Repository",
         url: "https://github.com/MazenAdel1/portfolio",
       },
     ],
@@ -128,6 +128,10 @@ export const projects: ProjectProps[] = [
         title: "Github Repository",
         url: "https://github.com/MazenAdel1/atp",
       },
+      {
+        title: "Demo Video",
+        url: "https://drive.google.com/file/d/1wOXbWeJuNdowOM9Ik1QLs0H1N5rJ97ut/view?usp=drive_link",
+      },
     ],
     technologies: [
       {
@@ -152,6 +156,35 @@ export const projects: ProjectProps[] = [
     images: {
       main: "/projects/logos/atp-logo.webp",
       background: "/projects/backgrounds/image-05.webp",
+    },
+  },
+  {
+    id: 6,
+    title: "Quran-V2",
+    description:
+      "A Quran application with a modern design and a lot of features like bookmarking, searching, and a fast reading experience.",
+    href: [
+      {
+        title: "Github Repository",
+        url: "https://github.com/MazenAdel1/Quran-V2",
+      },
+      { title: "Live Website", url: "https://quran-v2-chi.vercel.app/" },
+    ],
+    technologies: [
+      {
+        title: "Front-End",
+        technologies: [
+          "Next.js",
+          "React",
+          "Typescript",
+          "Tailwind CSS",
+          "Shadcn UI",
+        ],
+      },
+    ],
+    images: {
+      main: "/projects/logos/quran-logo.svg",
+      background: "/projects/backgrounds/image-06.webp",
     },
   },
 ];
