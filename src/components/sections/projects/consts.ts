@@ -122,7 +122,7 @@ export const projects: ProjectProps[] = [
     id: 5,
     title: "ATP GYM",
     description:
-      "A website for ATP GYM to display their services and trainers, with a custom CMS to manage the content, with English and Arabic support.",
+      "A website for ATP GYM to display their services and coaches, with a custom CMS to manage the whole website's content.",
     href: [
       {
         title: "Github Repository",
