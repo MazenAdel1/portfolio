@@ -8,9 +8,50 @@ import {
   Gdg,
 } from "@/components/sections";
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Mazen Adel",
+  url: "https://mazen-adel.vercel.app",
+  jobTitle: "Front-End Developer",
+  description:
+    "A passionate web developer and computer science student with a love for creating pixel-perfect websites and systems that solve real-world problems using modern technologies.",
+  email: "mazenadel.dev@gmail.com",
+  sameAs: [
+    "https://www.linkedin.com/in/mazen-adel-dev",
+    "https://github.com/MazenAdel1",
+  ],
+  knowsAbout: [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Shadcn UI",
+    "Tailwind CSS",
+    "Bootstrap",
+    "Framer Motion",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "PostgreSQL",
+    "Prisma",
+    "Git",
+    "GitHub",
+    "Jira",
+    "Firebase",
+    "Jest",
+  ],
+};
+
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="absolute top-0 size-0" id="home" />
 
       <main className="sticky top-4 z-0 md:top-6 lg:top-8">

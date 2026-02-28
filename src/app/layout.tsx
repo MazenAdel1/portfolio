@@ -4,10 +4,27 @@ import { ClashDisplay, Telma } from "@/assets/fonts";
 import { Header } from "@/components/layout/header";
 import { LoadingOverlay } from "@/components/layout";
 
+const BASE_URL = "https://mazen-adel.vercel.app";
+
 export const metadata: Metadata = {
-  title: "Mazen Adel",
+  metadataBase: new URL(BASE_URL),
+  title: "Mazen Adel | Front-End & MERN Stack Developer",
   description:
-    "Front-End & MERN Stack Developer with a passion for Software Engineering.",
+    "A passionate web developer and computer science student with a love for creating pixel-perfect websites and systems that solve real-world problems using modern technologies.",
+  keywords: [
+    "Mazen Adel",
+    "Front-End Developer",
+    "MERN Stack Developer",
+    "React Developer",
+    "Next.js Developer",
+    "TypeScript",
+    "Node.js",
+    "Web Developer",
+    "Portfolio",
+    "Software Engineer",
+  ],
+  authors: [{ name: "Mazen Adel", url: BASE_URL }],
+  creator: "Mazen Adel",
   icons: {
     icon: [
       "/favicons/favicon.ico",
@@ -17,6 +34,32 @@ export const metadata: Metadata = {
     apple: "/favicons/apple-touch-icon.png",
   },
   manifest: "/site.webmanifest",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: BASE_URL,
+    siteName: "Mazen Adel",
+    title: "Mazen Adel | Front-End & MERN Stack Developer",
+    description:
+      "A passionate web developer and computer science student with a love for creating pixel-perfect websites and systems that solve real-world problems using modern technologies.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mazen Adel | Front-End & MERN Stack Developer",
+    description:
+      "A passionate web developer and computer science student with a love for creating pixel-perfect websites and systems that solve real-world problems using modern technologies.",
+  },
+  alternates: {
+    canonical: BASE_URL,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
 };
 
 export default function RootLayout({
