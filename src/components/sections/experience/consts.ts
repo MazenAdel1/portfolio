@@ -18,7 +18,7 @@ export const experiences: ExperienceItemProps[] = [
     alt: "Semesteer",
     title: "Semesteer",
     type: "Freelance",
-    date: "Mid 2024 - Early 2025",
+    date: "Jul 2024 - Jun 2025",
     description:
       " Built the main client portal Application that Semesteer uses to manage their data using Next.js and Mongodb",
     direction: "right",
@@ -30,9 +30,9 @@ export const experiences: ExperienceItemProps[] = [
     alt: "Alembic Soft",
     title: "Alembic Soft",
     type: "Internship",
-    date: "Late 2023 - Mid 2025",
+    date: "Jan 2024 - May 2024",
     description:
-      "Built full stack management application for developers that makes life easier using Next.js, Bootstrap, Express.js, and Jest",
+      "Contributed to developing a full-stack management application for developers that makes life easier using Next.js, Bootstrap, Express.js, Jest, and Jira to manage Agile workflows.",
     borderRadius:
       "md:rounded-l-4xl md:rounded-b-4xl md:rounded-tr-none rounded-4xl",
     padding: "md:pl-5 pl-2",
