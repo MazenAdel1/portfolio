@@ -41,7 +41,7 @@ export default function Landing() {
           className="text-[11dvw] font-black uppercase text-shadow-(--drop-shadow-solid)"
         />
         <AnimatedText
-          text="Front-End Developer"
+          text="Software Engineer"
           as={"h2"}
           staggerChildren={0.33}
           duration={0.33}

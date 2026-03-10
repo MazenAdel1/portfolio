@@ -13,9 +13,9 @@ const jsonLd = {
   "@type": "Person",
   name: "Mazen Adel",
   url: "https://mazen-adel.vercel.app",
-  jobTitle: "Front-End Developer",
+  jobTitle: "Software Engineer",
   description:
-    "A passionate web developer and computer science student with a love for creating pixel-perfect websites and systems that solve real-world problems using modern technologies.",
+    "A passionate software engineer and computer science student with a love for creating pixel-perfect websites and systems that solve real-world problems using modern technologies.",
   email: "mazenadel.dev@gmail.com",
   sameAs: [
     "https://www.linkedin.com/in/mazen-adel-dev",

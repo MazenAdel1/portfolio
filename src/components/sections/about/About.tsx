@@ -42,8 +42,8 @@ export default function About() {
         Mazen Adel
       </h2>
       <p className="drop-shadow-solid relative max-w-3xl text-lg tracking-wide capitalize [word-spacing:0.05rem]">
-        I&apos;m a passionate web developer and computer science student with a
-        love for creating pixel-perfect websites and systems that solve
+        I&apos;m a passionate software engineer and computer science student
+        with a love for creating pixel-perfect websites and systems that solve
         real-world problems using modern technologies.
       </p>
     </section>

@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     "A passionate web developer and computer science student with a love for creating pixel-perfect websites and systems that solve real-world problems using modern technologies.",
   keywords: [
     "Mazen Adel",
+    "Software Engineer",
     "Front-End Developer",
     "MERN Stack Developer",
     "React Developer",
@@ -39,15 +40,15 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: BASE_URL,
     siteName: "Mazen Adel",
-    title: "Mazen Adel | Front-End & MERN Stack Developer",
+    title: "Mazen Adel | Software Engineer",
     description:
-      "A passionate web developer and computer science student with a love for creating pixel-perfect websites and systems that solve real-world problems using modern technologies.",
+      "A passionate software engineer and computer science student with a love for creating pixel-perfect websites and systems that solve real-world problems using modern technologies.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mazen Adel | Front-End & MERN Stack Developer",
+    title: "Mazen Adel | Software Engineer",
     description:
-      "A passionate web developer and computer science student with a love for creating pixel-perfect websites and systems that solve real-world problems using modern technologies.",
+      "A passionate software engineer and computer science student with a love for creating pixel-perfect websites and systems that solve real-world problems using modern technologies.",
   },
   alternates: {
     canonical: BASE_URL,
